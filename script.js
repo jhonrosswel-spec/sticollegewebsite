@@ -195,3 +195,37 @@ themeLogo.addEventListener("click", (event) => {
     showPanel("home", false);
   }
 })();
+
+/* BOTTOM PAGE DOTS */
+const pageDots = document.querySelectorAll(".page-dot");
+
+function setActiveDot(targetHref) {
+  pageDots.forEach((dot) => {
+    dot.classList.toggle("active", dot.getAttribute("href") === targetHref);
+  });
+}
+
+pageDots.forEach((dot) => {
+  dot.addEventListener("click", (event) => {
+    const targetHref = dot.getAttribute("href");
+    const matchingNavLink = document.querySelector(`.nav-links a[href="${targetHref}"]`);
+
+    if (matchingNavLink) {
+      event.preventDefault();
+      matchingNavLink.click();
+      setActiveDot(targetHref);
+    }
+  });
+});
+
+document.querySelectorAll(".nav-links a, .hero-actions a, .text-link").forEach((link) => {
+  link.addEventListener("click", () => {
+    const href = link.getAttribute("href");
+
+    if (href && href.startsWith("#")) {
+      setActiveDot(href);
+    }
+  });
+});
+
+setActiveDot(window.location.hash || "#home");
