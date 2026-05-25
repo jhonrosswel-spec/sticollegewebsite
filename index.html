@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>STI College Website</title>
+
+  <link rel="icon" type="image/png" href="assets/sti-logo.png" />
+  <link rel="shortcut icon" type="image/png" href="assets/sti-logo.png" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="#home" class="brand">
+        <img src="assets/sti-logo.png" alt="STI Logo" class="brand-logo" id="themeLogo">
+        <span class="brand-text">College</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About STI</a></li>
+        <li><a href="#programs">Programs</a></li>
+        <li><a href="#facilities">Facilities</a></li>
+        <li><a href="#student-life">Student Life</a></li>
+        <li><a href="#instructors">Instructor</a></li>
+        <li><a href="#contact" class="nav-button">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">Senior High School • College • Student Services</p>
+        <h1>Welcome to STI College</h1>
+        <p>
+          A simple and modern school website for showcasing campus information,
+          academic programs, facilities, student activities, and instructors.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#programs" class="primary-btn">Explore Programs</a>
+          <a href="#facilities" class="secondary-btn">View Facilities</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">About the School</p>
+        <h2>Learning made practical, modern, and career-ready</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card">
+          <h3>Mission</h3>
+          <p>
+            To provide quality education that helps students develop technical,
+            academic, and professional skills for future careers.
+          </p>
+        </div>
+
+        <div class="about-card">
+          <h3>Vision</h3>
+          <p>
+            To become a learning community that prepares students to be confident,
+            responsible, and globally competitive.
+          </p>
+        </div>
+
+        <div class="about-card">
+          <h3>Core Values</h3>
+          <p>
+            Excellence, discipline, teamwork, innovation, and commitment to lifelong learning.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section programs" id="programs">
+      <div class="section-heading">
+        <p class="eyebrow">Academic Programs</p>
+        <h2>Choose a path that fits your goals</h2>
+      </div>
+
+      <div class="card-grid">
+        <article class="program-card">
+          <span class="card-icon">IT</span>
+          <h3>Information Technology</h3>
+          <p>Study programming, databases, networking, web development, and system design.</p>
+        </article>
+
+        <article class="program-card">
+          <span class="card-icon">BM</span>
+          <h3>Business Management</h3>
+          <p>Learn business operations, entrepreneurship, marketing, and management skills.</p>
+        </article>
+
+        <article class="program-card">
+          <span class="card-icon">HM</span>
+          <h3>Hospitality Management</h3>
+          <p>Develop skills in hospitality service, tourism, food service, and customer relations.</p>
+        </article>
+
+        <article class="program-card">
+          <span class="card-icon">SHS</span>
+          <h3>Senior High School</h3>
+          <p>Prepare for college through strands focused on technology, business, and academics.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section facilities" id="facilities">
+      <div class="section-heading">
+        <p class="eyebrow">Campus Facilities</p>
+        <h2>Spaces designed for learning and student support</h2>
+      </div>
+
+      <div class="facility-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="learning">Learning</button>
+        <button class="filter-btn" data-filter="services">Services</button>
+        <button class="filter-btn" data-filter="student">Student Areas</button>
+      </div>
+
+      <div class="facility-grid">
+        <article class="facility-card" data-category="learning">
+          <button 
+            class="facility-image lab image-open" 
+            data-image="assets/comlab.jpg"
+            aria-label="View Computer Laboratory image">
+          </button>
+
+          <div class="facility-content">
+            <h3>Computer Laboratory</h3>
+            <p>Equipped for programming, web development, and hands-on computer activities.</p>
+          </div>
+        </article>
+
+        <article class="facility-card" data-category="learning">
+          <button 
+            class="facility-image classroom image-open" 
+            data-image="assets/smartclassroom.jpg"
+            aria-label="View Smart Classrooms image">
+          </button>
+
+          <div class="facility-content">
+            <h3>Smart Classrooms</h3>
+            <p>Comfortable rooms for lectures, discussions, presentations, and group activities.</p>
+          </div>
+        </article>
+
+        <article class="facility-card" data-category="learning">
+          <button 
+            class="facility-image library image-open" 
+            data-image="assets/library.png"
+            aria-label="View Library image">
+          </button>
+
+          <div class="facility-content">
+            <h3>Library</h3>
+            <p>A quiet study space with learning materials, references, and research support.</p>
+          </div>
+        </article>
+
+        <article class="facility-card" data-category="services">
+          <button 
+            class="facility-image clinic image-open" 
+            data-image="assets/clinic.png"
+            aria-label="View Clinic image">
+          </button>
+
+          <div class="facility-content">
+            <h3>School Clinic</h3>
+            <p>Provides basic health assistance and student wellness support during school hours.</p>
+          </div>
+        </article>
+
+        <article class="facility-card" data-category="services">
+          <button 
+            class="facility-image office image-open" 
+            data-image="assets/registrar.jpg"
+            aria-label="View Registrar and Admin Office image">
+          </button>
+
+          <div class="facility-content">
+            <h3>Registrar and Admin Office</h3>
+            <p>Handles student records, enrollment assistance, and other school transactions.</p>
+          </div>
+        </article>
+
+        <article class="facility-card" data-category="student">
+          <button 
+            class="facility-image lounge image-open" 
+            data-image="assets/studentlounge.png"
+            aria-label="View Student Lounge image">
+          </button>
+
+          <div class="facility-content">
+            <h3>Student Lounge</h3>
+            <p>A space where students can rest, review lessons, and interact with classmates.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section student-life" id="student-life">
+      <div class="section-heading">
+        <p class="eyebrow">Student Life</p>
+        <h2>More than classrooms and assignments</h2>
+      </div>
+
+      <div class="life-layout">
+        <div class="life-main">
+          <h3>Activities and Organizations</h3>
+          <p>
+            Students can participate in school events, academic competitions, outreach programs,
+            organization activities, seminars, and campus celebrations.
+          </p>
+          <a href="#instructors" class="text-link">Meet our instructors</a>
+        </div>
+
+        <div class="life-list">
+          <div>
+            <strong>Academic Events</strong>
+            <span>Seminars, workshops, and skills competitions</span>
+          </div>
+
+          <div>
+            <strong>Clubs and Organizations</strong>
+            <span>Leadership, creativity, technology, and community activities</span>
+          </div>
+
+          <div>
+            <strong>Campus Support</strong>
+            <span>Guidance, clinic, library, and student services</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section announcements instructors" id="instructors">
+      <div class="section-heading">
+        <p class="eyebrow">Instructor</p>
+        <h2>Meet our instructors</h2>
+      </div>
+
+      <div class="announcement-list">
+        <article class="announcement-card">
+          <img 
+            src="assets/instructor1.jpg" 
+            alt="Jon Philip Daludado"
+            class="instructor-photo image-open"
+            data-image="assets/instructor1.jpg"
+            style="width: 100%; height: 260px; object-fit: cover; border-radius: 18px; margin-bottom: 22px; cursor: pointer;"
+          >
+          <span>Web Development</span>
+          <h3>Jon Philip Daludado</h3>
+          <p>Handles web design, frontend development, and practical website activities.</p>
+        </article>
+
+        <article class="announcement-card">
+          <img 
+            src="assets/instructor2.jpg" 
+            alt="Euencis Palmones"
+            class="instructor-photo image-open"
+            data-image="assets/instructor2.jpg"
+            style="width: 100%; height: 260px; object-fit: cover; border-radius: 18px; margin-bottom: 22px; cursor: pointer;"
+          >
+          <span>Computer Programming</span>
+          <h3>Euencis Palmones</h3>
+          <p>Guides students in coding, logic building, and software development fundamentals.</p>
+        </article>
+
+        <article class="announcement-card">
+          <img 
+            src="assets/instructor3.png" 
+            alt="Kyla Cassandra Escriba"
+            class="instructor-photo image-open"
+            data-image="assets/instructor3.png"
+            style="width: 100%; height: 260px; object-fit: cover; border-radius: 18px; margin-bottom: 22px; cursor: pointer;"
+          >
+          <span>Information Technology</span>
+          <h3>Kyla Cassandra Escriba</h3>
+          <p>Teaches programming, computer systems, and technology-related subjects.</p>
+        </article>
+
+        <article class="announcement-card">
+          <img 
+            src="assets/instructor4.jpg" 
+            alt="Instructor 4"
+            class="instructor-photo image-open"
+            data-image="assets/instructor4.jpg"
+            style="width: 100%; height: 260px; object-fit: cover; border-radius: 18px; margin-bottom: 22px; cursor: pointer;"
+          >
+          <span>Senior High School</span>
+          <h3>Instructor Name</h3>
+          <p>Supports students in academic learning, classroom activities, and performance tasks.</p>
+        </article>
+
+        <article class="announcement-card">
+          <img 
+            src="assets/instructor5.jpg" 
+            alt="Instructor 5"
+            class="instructor-photo image-open"
+            data-image="assets/instructor5.jpg"
+            style="width: 100%; height: 260px; object-fit: cover; border-radius: 18px; margin-bottom: 22px; cursor: pointer;"
+          >
+          <span>Business Management</span>
+          <h3>Instructor Name</h3>
+          <p>Teaches business concepts, management skills, entrepreneurship, and workplace readiness.</p>
+        </article>
+
+        <article class="announcement-card">
+          <img 
+            src="assets/instructor6.jpg" 
+            alt="Instructor 6"
+            class="instructor-photo image-open"
+            data-image="assets/instructor6.jpg"
+            style="width: 100%; height: 260px; object-fit: cover; border-radius: 18px; margin-bottom: 22px; cursor: pointer;"
+          >
+          <span>General Education</span>
+          <h3>Instructor Name</h3>
+          <p>Helps students strengthen communication, critical thinking, and general academic skills.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="section-heading">
+        <p class="eyebrow">Contact Us</p>
+        <h2>Send an inquiry</h2>
+      </div>
+
+      <div class="contact-layout">
+        <div class="contact-info">
+          <h3>Campus Information</h3>
+          <p><strong>Address:</strong> Replace this with your campus address</p>
+          <p><strong>Email:</strong> info@example.com</p>
+          <p><strong>Phone:</strong> 0912-345-6789</p>
+          <p class="note">
+            This form is frontend-only. It will not send real messages unless you add a backend or form service later.
+          </p>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <label>
+            Full Name
+            <input type="text" id="name" placeholder="Enter your name" required />
+          </label>
+
+          <label>
+            Email Address
+            <input type="email" id="email" placeholder="Enter your email" required />
+          </label>
+
+          <label>
+            Message
+            <textarea id="message" rows="5" placeholder="Write your message" required></textarea>
+          </label>
+
+          <button type="submit" class="primary-btn">Submit Inquiry</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 STI College Website. For educational use only.</p>
+  </footer>
+
+  <div class="image-modal" id="imageModal">
+    <button class="modal-close" id="modalClose" aria-label="Close image">×</button>
+    <img id="modalImage" src="" alt="Facility preview" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
